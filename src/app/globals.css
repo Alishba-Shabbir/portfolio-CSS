@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
+
 *{
   margin: 0;
   padding: 0;
@@ -315,6 +315,9 @@ button:nth-child(2):hover{
   }
 }
 
+
+
+
 .about{
   display: grid;
   background-color: #262525;
@@ -575,231 +578,112 @@ h3{
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
   width: 85%;
-} */
-
-
-
-/* 
-
-
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
 
-/* Layout Container */
-.portfolio-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-/* Left and Right Containers */
-.left-container, .right-container {
-  flex: 1;
-  padding: 2rem;
-}
 
-.left-container {
-  background-color: #f0f0f0;
-}
 
-.right-container {
-  background-color: #fff;
-}
-
-/* Responsive Typography */
-h1, h2 {
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-/* Content Section */
-.content {
-  max-width: 800px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.content p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.button-container button {
-  padding: 0.8rem 1.6rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  margin: 0.5rem;
-}
-
-/* Image & Circle Design */
-.image {
-  width: 80%;
-  max-width: 300px;
-  border-radius: 50%;
-  margin: auto;
-  display: block;
-}
-
-.circle {
-  border: 2px solid #333;
-  border-radius: 50%;
-  position: absolute;
-}
-
-/* About Section */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.about-img {
-  width: 80%;
-  max-width: 250px;
-  border-radius: 50%;
-}
-
-.about-text {
-  font-size: 1rem;
-}
 
 /* Skills Section */
 .skills {
-  padding: 2rem;
+  padding: 7rem 200px;
+  background-color: #262525;
 }
 
-.skills-row {
+.skills .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+}
+span{
+  color: chocolate;
+}
+
+.skills .skills-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 5rem;
 }
 
 .skills-column {
   flex: 1;
-  min-width: 150px;
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid #ccc;
-}
-
-/* Contact Section */
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  background-color: #333;
   padding: 2rem;
+  border-radius: 0.6rem;
+  color: #fff;
 }
 
-.contact-form form input, .contact-form form textarea {
+.skills-column .title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-box .skills-content {
+  border: 0.2rem solid chocolate;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1.5rem;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+}
+
+.skill-box .skills-content:hover::before {
   width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
 }
 
-/* Header Navigation */
-.header-button {
+.skills-content .progress {
+  padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #fff;
 }
 
-.header-button li {
-  list-style: none;
+.skills-content .progress h3 span {
+  color: chocolate;
 }
 
-/* Social Links */
-.socialLinks .icon {
-  font-size: 2rem;
-  margin: 0.5rem;
-  display: inline-block;
+.skills-content .progress .bar {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 6rem;
+  border: 0.1rem solid chocolate;
+  margin: 0.6rem 0;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .portfolio-container {
-    flex-direction: column;
-  }
-
-  .content h1 {
-    font-size: 2rem;
-  }
-
-  .content p {
-    font-size: 0.9rem;
-  }
-
-  .button-container button {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.4rem;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .about-img {
-    width: 100%;
-    margin: auto;
-  }
-
-  .contact {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .header-button {
-    flex-direction: column;
-    padding: 1rem;
-  }
+.skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background-color: chocolate;
 }
 
-@media (max-width: 480px) {
-  .content h1 {
-    font-size: 1.8rem;
-  }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+  width: 90%;
+}
 
-  .button-container button {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-  }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+  width: 80%;
+}
 
-  .skills-row {
-    flex-direction: column;
-  }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+  width: 75%;
+}
 
-  .header-button {
-    gap: 1rem;
-    padding: 0.5rem;
-  }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+  width: 85%;
+}
 
-  .socialLinks .icon {
-    font-size: 1.5rem;
-  }
-} */
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+  width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+  width: 80%;
+} 
+ 
